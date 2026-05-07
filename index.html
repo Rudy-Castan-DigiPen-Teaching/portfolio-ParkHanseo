@@ -1,28 +1,21 @@
-<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
-<!-- adobe.ly/2GAgF93 -->
-<!-- https://scrimba.com/build-and-deploy-your-portfolio-c012 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="../img/face.jpg">
+    <link rel="icon" type="image/png" href="img/profile.png">
 
-    <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STUDENT TODO Website</title>
+    <title>Hanseo Park - Portfolio</title>
 
-    <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="external/normalize.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 
-    <!-- https://fonts.google.com/selection/embed -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..900;1,300..900&family=VT323&family=Press+Start+2P&display=swap"
         rel="stylesheet" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -31,208 +24,336 @@
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="img/cout.jpg" alt="">
+            <i class="fas fa-gamepad" style="margin-right: 10px;"></i> Hanseo Park
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
         </button>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"> <a href="#home" class="nav__link">Home</a> </li>
-                <li class="nav__item"> <a href="#skills" class="nav__link">Skills</a> </li>
-                <li class="nav__item"> <a href="#about" class="nav__link">About Me</a> </li>
-                <li class="nav__item"> <a href="#projects" class="nav__link">Projects</a> </li>
-                <li class="nav__item"> <a href="#resume" class="nav__link">Resume</a> </li>
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Introduction -->
-
-    <section class="intro" id="#home">
-        <!-- TODO put in a mouse based interactive shader visualization page-->
-        <!-- <div class="intro-bg">
-            <iframe src="webgl/for_fun.html"></iframe>
-        </div> -->
+    <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
-            Hi, I am <strong>TODO TODO</strong>
+            Hi, I am <strong>Hanseo Park</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">Game Programmer/Designer/Developer/Player/TODO/TODO</p>
-        <img src="img/face.jpg" alt="a picture of TODO TODO smiling" class="intro__img" />
+        <p class="section__subtitle section__subtitle--intro">Technical Artist</p>
+        <img src="img/profile.png" alt="Profile Picture" class="intro__img" />
     </section>
 
-    <!-- My Services -->
-    <section class="my-services" id="skills">
-        <h2 class="section__title section__title--services">SKLILZ</h2>
+    <!-- What I Do -->
+    <section class="my-services" id="what-i-do">
+        <h2 class="section__title section__title--services">What I do</h2>
         <div class="services">
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>Technical Artist</h3>
+                <p>
+                    I enjoy the challenge of balancing intuitive, maintainable code with optimized performance. Building
+                    tools and pipelines that empower artists to create stunning visuals is incredibly rewarding to me.
                 </p>
             </div>
-
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>C++ Enthusiast</h3>
+                <p>
+                    C++ is my go-to language for game development. It allows me to express my ideas clearly while
+                    maintaining strict control over memory and CPU execution to build robust rendering engines.
                 </p>
             </div>
-
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>Graphics Programmer</h3>
+                <p>
+                    I have a strong passion for computer graphics and love diving deep into low-level systems. I am
+                    constantly exploring new rendering techniques to squeeze out every drop of performance.
                 </p>
             </div>
         </div>
-
-        <a href="#projects" class="btn">Projects</a>
     </section>
 
     <!-- About Me -->
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">Who I am</h2>
         <p class="section__subtitle section__subtitle--about">
-            Student Game Programmer TODO TODO
+            My Passion for Game Development
         </p>
 
         <div class="about-me__body">
             <p>
-                TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                I am currently a student studying Computer Science with a focus on Real-Time Interactive Simulation. I
+                love participating in game jams, exploring new rendering techniques, and collaborating with diverse
+                teams to bring interactive experiences to life.
             </p>
             <p>
-                TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                I am always open to discussing new ideas, sharing knowledge, and learning from others. I strive to
+                continuously improve my skills in computer graphics and technical art.
             </p>
         </div>
-        <img src="img/tall.jpg" alt="picture of TODO TODO" class="about-me__img" />
+        <img src="img/profile.png" alt="About Me Picture" class="about-me__img" />
+    </section>
+
+    <!-- Skills & Tools -->
+    <section class="my-skills" id="skills">
+        <h2 class="section__title section__title--skills">Skills & Tools</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+                            class="skill-icon-large" alt="C" />
+                        <span>C</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                            class="skill-icon-large" alt="C++" />
+                        <span>C++</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                            class="skill-icon-large" alt="Python" />
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon-placeholder"><i class="fas fa-code"></i></div>
+                        <span>HLSL / GLSL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Software & Tools</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"
+                            class="skill-icon-large" alt="Blender" />
+                        <span>Blender</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/icons/3dsmax.png" class="skill-icon-large" alt="3ds Max" />
+                        <span>3ds Max</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/icons/zbrush.png" class="skill-icon-large" alt="ZBrush" />
+                        <span>ZBrush</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/icons/substance.svg" class="skill-icon-large" alt="Substance Painter" />
+                        <span>Substance Painter</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg"
+                            class="skill-icon-large icon-bg-light" alt="Photoshop" />
+                        <span>Photoshop</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg"
+                            class="skill-icon-large icon-bg-light" alt="Illustrator" />
+                        <span>Illustrator</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-plain.svg"
+                            class="skill-icon-large icon-bg-light" alt="Premiere" />
+                        <span>Premiere Pro</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-plain.svg"
+                            class="skill-icon-large icon-bg-light" alt="After Effects" />
+                        <span>After Effects</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/icons/aseprite.png" class="skill-icon-large" alt="Aseprite" />
+                        <span>Aseprite</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Development</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-plain.svg"
+                            class="skill-icon-large icon-bg-light" alt="Visual Studio" />
+                        <span>Visual Studio</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            class="skill-icon-large" alt="Git" />
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                            class="skill-icon-large icon-bg-light" alt="GitHub" />
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opengl/opengl-original.svg"
+                            class="skill-icon-large" alt="OpenGL" />
+                        <span>OpenGL/DX</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="img/icons/notion.png" class="skill-icon-large" alt="Notion" />
+                        <span>Notion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- My Portfolio -->
     <section class="my-projects" id="projects">
         <h2 class="section__title section__title--projects">My Projects</h2>
         <p class="section__subtitle section__subtitle--projects">
-            A selection of my range of projects
+            A selection of my graphics programming demos
         </p>
         <div class="portfolio">
-            <a href="portfolio/01_hello.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/01_hello.jpg" alt="" class="portfolio__img" />
+            <a href="portfolio/01_procedural_modeling.html" class="portfolio__item" data-title="Procedural Modeling">
+                <img src="img/portfolio_thumbnails/under_construction.jpg" alt="Procedural Modeling Thumbnail"
+                    class="portfolio__img" />
             </a>
-            <a href="portfolio/02_meshes.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/02_meshes.jpg" alt="" class="portfolio__img" />
+            <a href="portfolio/02_fog.html" class="portfolio__item" data-title="Fog (Linear/Exp)">
+                <img src="img/portfolio_thumbnails/under_construction.jpg" alt="Fog Thumbnail" class="portfolio__img" />
             </a>
-            <a href="portfolio/03_fog.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/03_fog.jpg" alt="" class="portfolio__img" />
+            <a href="portfolio/03_toon_shading.html" class="portfolio__item" data-title="Toon / Cell Shading">
+                <img src="img/portfolio_thumbnails/under_construction.jpg" alt="Toon Shading Thumbnail"
+                    class="portfolio__img" />
             </a>
-            <a href="portfolio/04_toon.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/04_toon.jpg" alt="" class="portfolio__img" />
+            <a href="portfolio/04_shadow_mapping.html" class="portfolio__item" data-title="Shadow Mapping">
+                <img src="img/portfolio_thumbnails/under_construction.jpg" alt="Shadow Mapping Thumbnail"
+                    class="portfolio__img" />
             </a>
-            <a href="portfolio/05_shadow.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/05_shadow.jpg" alt="" class="portfolio__img" />
+            <a href="portfolio/05_noise.html" class="portfolio__item" data-title="Perlin / Value Noise">
+                <img src="img/portfolio_thumbnails/under_construction.jpg" alt="Noise Thumbnail"
+                    class="portfolio__img" />
             </a>
-            <a href="portfolio/06_value.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/06_value.jpg" alt="" class="portfolio__img" />
-            </a>
-            <a href="portfolio/07_gradient.html" class="portfolio__item">
-                <img src="img/portfolio_thumbnails/07_gradient.jpg" alt="" class="portfolio__img" />
-            </a>
-
         </div>
     </section>
 
     <!-- Resume Section -->
     <section class="my-resume" id="resume">
         <h2 class="section__title section__title--resume">Resume</h2>
-        <a target="_blank" href="docs/Resume.pdf"><i class="far fa-file-pdf"></i> PDF</a>
+        <a target="_blank" href="docs/Resume.pdf" class="btn"><i class="far fa-file-pdf"></i> Download Resume (PDF)</a>
 
         <div class="resume-section">
-            <h3>Experience</h3>
+            <h3>Education</h3>
             <div class="resume-item">
                 <p>
-                    <b>Title, Company</b></br>
-                    Month Year - Present</br>
-                    <em>City, State, Country</em></br>
-                    What you did, how you did it, result. Quantify your achievement(s) try to have at least one like
-                    this. Look at the example below.
+                    <b>Keimyung University / DigiPen Institute of Technology | Daegu, South Korea</b><br>
+                    B.S. in Computer Science | GPA: 3.43 <span style="float:right;">Expected May 2030</span><br>
+                    <em>Relevant Courses:</em> Computer Graphics I, Computer Graphics II, Advanced C/C++, Operating System I, Data Structures
                 </p>
+            </div>
+
+            <h3>Technical Skills</h3>
+            <div class="resume-item">
+                <p>
+                    <b>Programming Languages:</b> C++, C<br>
+                    <b>Engines:</b> Custom C++/OpenGL Engine<br>
+                    <b>APIs & Software Tools:</b> OpenGL, Aseprite, Blender, 3ds Max, ZBrush, Substance Painter, Adobe After Effects, Adobe Premiere Pro, Adobe Photoshop, Adobe Illustrator<br>
+                    <b>Interpersonal Skills:</b> Cross-functional Collaboration, UX/UI Oriented Design, Problem-Solving, Team Leadership
+                </p>
+            </div>
+
+            <h3>Work Experience</h3>
+            <div class="resume-item">
+                <p>
+                    <b>Sandbox Network Inc. | Freelance Asset Artist | Seoul, South Korea</b> <span style="float:right;">May 2022 ??Nov 2022</span>
+                </p>
+                <ul>
+                    <li>Produced specialized visual asset files for various content creator videos as a freelance artist, contributing to the high-quality visual production of digital media.</li>
+                    <li>Collaborated effectively within a team-based environment by actively participating in production meetings and managing role distributions, ensuring efficient task management across 100% of assigned projects.</li>
+                    <li>Successfully delivered a consistent volume of high-quality assets within strict production cycles, supporting the timely release of multiple video series over a 6-month period.</li>
+                </ul>
             </div>
             <div class="resume-item">
                 <p>
-                    <b>Software Test Engineer Intern, Qualtrics</b></br>
-                    Month Year - Month Year </br>
-                    <em>Seattle, WA</em></br>
-                    Implemented an extensible script in Python to automate project creation with static data on tests to
-                    improve pass rates and duration, ultimately speeding up software releases. Improved test times
-                    across 3 teams by nearly 400% with more stability. Reviewed design docs and prototypes of an
-                    upcoming feature release to create nearly 50 test cases. Performed manual testing and triaged 15
-                    bugs with engineers.
+                    <b>Scon Inc. | Freelance Artist (Project-based) | Seoul, South Korea</b> <span style="float:right;">Sep 2023 ??Nov 2023</span>
                 </p>
+                <ul>
+                    <li>Executed a fast-paced, project-based commission to produce high-quality video assets, optimizing the workflow to meet strict deadlines across a 3-month timeline.</li>
+                    <li>Coordinated closely with team members to divide responsibilities and troubleshoot visual design challenges, successfully fulfilling all client specifications without revision delays.</li>
+                </ul>
             </div>
+
             <h3>Projects</h3>
             <div class="resume-item">
                 <p>
-                    <b>Role, Name of Project</b></br>
-                    Month Year - Month Year</br>
-                    <em>Redmond, WA</em></br>
-                    Type of game, (2D Platformer, FPS) and describe its genre (Horror, Adventure, etc.).
-                    Collaborated with a team of x and developed a ...
-                    Designed most of the front end & debugged PHP.
-                    Awarded the Most Creative Award by Appian and Best Innovation in Collaboration Award by Red
-                    Ventures.
+                    <b>RESCOOK | Art Lead & Design Lead</b> <span style="float:right;">Sep 2025 ??Present</span>
                 </p>
+                <ul>
+                    <li>Dungeon rescue cooking game featuring a diverse cast of characters and varied culinary themes.</li>
+                    <li>Conceptualized and designed a wide array of NPC appearances and unique environmental assets to enhance game immersion.</li>
+                    <li>Conducted extensive visual research to implement diverse cooking ingredients and thematic dungeon elements.</li>
+                    <li>Managed the design pipeline to align artistic assets with complex gameplay loops and character-driven storytelling.</li>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <p>
+                    <b>Project V | Art Lead & Design Lead</b> <span style="float:right;">Mar 2025 ??Jun 2025</span>
+                </p>
+                <ul>
+                    <li>Top-down pixel art roguelike with a "Computer Antivirus" theme, focusing on fluid motion and visual effects.</li>
+                    <li>Developed a state-based animation system to achieve natural and responsive player movement across multiple motion states.</li>
+                    <li>Researched and implemented sophisticated visual effects, such as glitch effects, to reinforce the antivirus concept and increase player engagement.</li>
+                    <li>Spearheaded the pixel art direction, ensuring consistent quality and stylistic coherence throughout the game.</li>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <p>
+                    <b>Forest NAGA | Art Lead & Design Lead</b> <span style="float:right;">Oct 2024 ??Nov 2024</span>
+                </p>
+                <ul>
+                    <li>Auto-battler defense game featuring merging mechanics, team synergies, and custom pathfinding.</li>
+                    <li>Spearheaded the overall UI/UX and game design, establishing a clear visual identity and user-friendly interface.</li>
+                    <li>Produced over 100 high-quality 16-bit pixel art assets using Aseprite, including character animations, UI elements, intro sequences, and logos.</li>
+                    <li>Collaborated closely with the Tech Lead by delivering comprehensive UI functional specifications and precise image coordinate data, contributing to the project receiving high evaluations.</li>
+                </ul>
             </div>
 
             <h3>Leadership Experience</h3>
             <div class="resume-item">
                 <p>
-                    <b>Role, DigiPen Institute of Technology</b></br>
-                    Month Year - Month Year</br>
-                    <em>Redmond, WA</em></br>
-                    A lot of you do many things on campus.
-                    For example, did you manage/host a game jam?
-                    Brainstorm initiatives you have worked on.
+                    <b>Masan High School | President & Vice President of Engineering Club | Changwon, South Korea</b> <span style="float:right;">Mar 2021 ??Feb 2023</span>
                 </p>
+                <ul>
+                    <li>Led and managed an official school-sponsored engineering club of 40 members, fostering a collaborative environment for technical exploration and innovation.</li>
+                    <li>Organized structured club activities and guided team-based engineering projects, improving members' problem-solving skills and technical understanding.</li>
+                    <li>Acted as the primary liaison between students and school faculty to secure resources, coordinate schedules, and plan annual club initiatives.</li>
+                </ul>
             </div>
-
-            <h3>Education</h3>
             <div class="resume-item">
                 <p>
-                    <b>Bachelor of Science in Computer Science in Real-Time Interactive Simulation</b></br>
-                    Year-Year</br>
-                    <em>Daegu, Korea & Redmond, WA, USA</em></br>
-                    Relevant Courses: Name the courses that would draw attention, significant, relevant to the job.
+                    <b>Masan High School | Class Vice President | Changwon, South Korea</b> <span style="float:right;">Mar 2023 ??Feb 2024</span>
                 </p>
+                <ul>
+                    <li>Served as the Class Vice President, assisting in representing student interests and facilitating effective communication between around 30 peers and teachers.</li>
+                    <li>Assisted in coordinating school events and managing daily administrative tasks to maintain a highly organized and supportive academic environment.</li>
+                    <li>Developed strong leadership and conflict-resolution skills by supporting class discussions and managing collaborative group activities.</li>
+                </ul>
             </div>
         </div>
     </section>
-    <!-- /Resume Section -->
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:hanseo.park@digipen.edu" class="footer__link">hanseo.park@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="#" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/ParkHanseo" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
-            <!-- Want to list more? search : https://fontawesome.com/v5/search?ic=brands -->
         </ul>
     </footer>
 
