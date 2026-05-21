@@ -6,11 +6,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="../img/face.jpg">
+    <link rel="icon" type="image/png" href="../img/profile.png">
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Hanseo Park - Portfolio</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -31,8 +31,7 @@
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+            <i class="fas fa-cube" style="margin-right: 10px;"></i> Hanseo Park
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -64,28 +63,29 @@
             Project <strong>Hello Quad</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">3D Graphics</p>
-        <img src="../img/portfolio_thumbnails/01_hello.jpg" alt="a picture of this portfolio item" class="intro__img">
+        <img src="../img/portfolio_thumbnails/01_hello.png" alt="a picture of this portfolio item" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project is a 'Hello Quad' rendering assignment designed to build a solid foundation in the graphics pipeline using C++ and OpenGL. Instead of calling native <code>gl</code> functions directly, I focused on building a platform-independent and safe rendering architecture. To do this, I implemented a custom C++ wrapper class (<code>GL.hpp</code>) that seamlessly supports OpenGL 3.3 Core, OpenGL ES 3.0, and WebGL 2.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Object-Oriented OpenGL Wrappers:</strong> Encapsulated core OpenGL objects like <code>VertexBuffer</code>, <code>IndexBuffer</code>, <code>VertexArray</code>, and <code>Texture</code> into C++ classes. I applied the RAII pattern to ensure robust resource management and prevent memory leaks.</li>
+            <li><strong>Cross-Platform Compatibility:</strong> Wrote all rendering logic exclusively through the <code>GL.hpp</code> interface, making the code fully compatible across desktop (OpenGL 3.3), mobile (ES 3.0), and web (WebGL 2) environments.</li>
+            <li><strong>Time-Based Dynamic Animation:</strong> Hooked up an environment variable (<code>uTime</code>) and some trig functions to the shaders. The vertex shader handles smooth circular movement, while the fragment shader dynamically cycles the colors over time.</li>
+            <li><strong>Custom Texture Mapping:</strong> Brought in a hand-drawn pixel art character (<code>paint_me.png</code>) and successfully mapped it onto the rotating quad mesh.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>This assignment gave me a much deeper appreciation for what goes on under the hood when communicating with the GPU. Abstracting OpenGL's state machine into object-oriented C++ classes really highlighted the importance of strict resource lifecycle management—from buffer generation and binding to cleanup. It was also incredibly fun to see how parallel math operations in shaders can create visually appealing effects out of simple math. I'm looking forward to expanding this architecture to handle actual 3D models and lighting systems next!</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <!-- TODO demo the webgl version of the project -->
-        <iframe id="demo" src="../webgl/D01HelloQuad/graphics_fun.html"></iframe>
+        <!-- WebGL Demo Iframe -->
+        <iframe id="demo" src="../webgl/D01HelloQuad/graphics_fun.html" style="width: 100%; max-width: 800px; height: 600px; border: 2px solid var(--clr-accent, #ff7e67); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); display: block; margin: 0 auto;"></iframe>
     </div>
 
 
