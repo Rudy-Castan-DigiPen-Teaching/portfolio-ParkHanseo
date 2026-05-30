@@ -6,12 +6,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="../img/face.jpg">
+    <link rel="icon" type="image/png" href="../img/profile.png">
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>STUDENT TODO Website</title>
+    <title>Hanseo Park - Procedural Geometric Modeling</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -32,8 +32,7 @@
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+            <i class="fas fa-cube" style="margin-right: 10px;"></i> Hanseo Park
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -66,27 +65,30 @@
             Project <strong>Procedural Geometric Modeling</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">3D Graphics</p>
-        <img src="../img/portfolio_thumbnails/02_meshes.jpg" alt="a picture of this portfolio item" class="intro__img">
+        <img src="../img/portfolio_thumbnails/02_meshes.png" alt="a picture of this portfolio item" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project is about generating 3D shapes using only C++ code and math, without any modeling software. I built a system that creates six shapes: Plane, Cube, Sphere, Torus, Cylinder, and Cone. These shapes are generated in real-time based on user-defined stacks and slices. The project also supports textured, wireframe, and normal-visualization modes, which can be easily changed using an ImGui interface.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Index Buffer Construction:</strong> Implemented <code>build_index_buffer()</code> to group two triangles into quads using a stride-based loop. This serves as the base structure for all shapes.</li>
+            <li><strong>Plane Vertex Generation:</strong> Created <code>create_plane_vertices()</code> to generate a grid of vertices with correct UV coordinates and normals. The Cube reuses this function by combining six planes.</li>
+            <li><strong>Sphere Generation:</strong> Used spherical coordinates (latitude and longitude) to place vertices evenly. The normals are based on the position vectors, creating a smooth surface.</li>
+            <li><strong>Torus Generation:</strong> Created a ring shape using two angles (tube radius = 0.15, ring radius = 0.35). The normals were calculated by finding the offset from the ring's center to each vertex.</li>
+            <li><strong>Cylinder & Cone:</strong> Generated the side bodies and added circular top and bottom caps. I used a triangle-fan method and made sure the index winding order (CCW) was correct for both caps.</li>
+            <li><strong>Wireframe Mode:</strong> Implemented <code>convert_to_lines_pattern()</code> to draw clean quad outlines from triangle pairs without drawing lines twice.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>Writing code to generate 3D shapes made me realize how important math is in 3D graphics. The torus was the most difficult part. To get the correct normals, I had to carefully calculate the vector from the ring's center to the surface. Also, making the top and bottom caps of the cylinder and cone required a lot of attention to the index ordering. Using real-time sliders was very helpful for testing. It was really satisfying to watch a rough sphere smoothly change into a perfectly round shape.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D02ProceduralMeshes/graphics_fun.html?start=meshes" tabindex="-1"></iframe>
+        <iframe id="demo" src="../webgl/D02ProceduralMeshes/graphics_fun.html?start=meshes" tabindex="-1" style="width: 100%; max-width: 800px; height: 600px; border: 2px solid var(--clr-accent, #ff7e67); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); display: block; margin: 0 auto;"></iframe>
     </div>
 
     <!-- Footer -->
@@ -112,3 +114,4 @@
 </body>
 
 </html>
+

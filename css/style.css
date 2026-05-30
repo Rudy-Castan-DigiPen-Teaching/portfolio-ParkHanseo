@@ -701,6 +701,19 @@ header::before {
   margin-right: auto;
 }
 
+/* Inline code highlight for function names */
+.portfolio-item-individual code {
+  font-family: var(--ff-secondary);
+  font-size: 0.88em;
+  color: var(--clr-accent);
+  background: rgba(140, 90, 60, 0.1);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  border: 1px solid rgba(140, 90, 60, 0.3);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
 #webgl-canvas-container {
   box-shadow: 0 0 20px rgba(75,46,43,0.3);
   display: block;
