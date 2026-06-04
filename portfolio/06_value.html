@@ -1,4 +1,4 @@
-﻿<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
+<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
 <!-- adobe.ly/2GAgF93 -->
 <!-- https://scrimba.com/build-and-deploy-your-portfolio-c012 -->
 <!DOCTYPE html>
@@ -31,8 +31,7 @@
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+            <i class="fas fa-cube" style="margin-right: 10px;"></i> Hanseo Park
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -64,27 +63,31 @@
             Project <strong>Value Noise</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">3D Graphics</p>
-        <img src="../img/portfolio_thumbnails/06_value.jpg" alt="a picture of this portfolio item" class="intro__img">
+        <img src="../img/portfolio_thumbnails/06_value.png" alt="a picture of this portfolio item" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project implements a <strong>Value Noise</strong> texture generation system using C++ and OpenGL. Value Noise is a foundational procedural noise technique where random values are assigned to integer lattice points and then smoothly interpolated between them. The result is a continuous, smooth noise function used in procedural texture generation, terrain heightmaps, and visual effects. The demo renders the generated noise into a GPU texture in real-time and displays it on a full-screen quad with support for 1D, 2D, and 3D noise evaluation.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Permutation Hash:</strong> Built a lookup table with <code>std::iota</code> and a Fisher-Yates shuffle, using bitmasking for seamless periodic tiling.</li>
+            <li><strong>Noise Evaluation:</strong> Implemented 1D/2D/3D <code>ValueNoise&lt;T&gt;</code> using linear, bilinear, and trilinear interpolation.</li>
+            <li><strong>Smooth Curves:</strong> Added runtime-selectable interpolation methods (Linear, Cosine, Smoothstep, and Quintic).</li>
+            <li><strong>Procedural Patterns:</strong> Generated complex composite textures (fBm, Turbulence, Marble, Wood) using multi-octave noise.</li>
+            <li><strong>Texture Pipeline:</strong> Optimized GPU uploads with <code>GL::TexStorage2D</code> and <code>GL::TexSubImage2D</code> via a custom wrapper.</li>
+            <li><strong>Multithreading:</strong> Integrated a Job System to distribute noise generation across CPU cores, preventing main-thread blocking.</li>
+            <li><strong>Shaders:</strong> Wrote GLSL shaders to sample the noise texture on a full-screen quad with real-time tiling previews.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>Building this system deepened my practical understanding of procedural generation. A major technical takeaway was achieving seamless tiling purely through bitmasking, eliminating complex border logic. I also saw firsthand how switching from Linear to Quintic curves dramatically softens gradients for organic results. Finally, implementing multi-threading required careful work distribution to prevent data races, ultimately allowing complex multi-octave patterns like Marble to render smoothly in real time.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D06ValueNoise/graphics_fun.html?start=value" tabindex="-1"></iframe>
+        <iframe id="demo" src="../webgl/D06ValueNoise/graphics_fun.html?start=value&v=3" tabindex="-1" style="width: 100%; max-width: 800px; height: 600px; border: 2px solid var(--clr-accent); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"></iframe>
     </div>
 
     <!-- Footer -->
