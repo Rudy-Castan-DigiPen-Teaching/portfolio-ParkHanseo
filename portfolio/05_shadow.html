@@ -1,4 +1,4 @@
-﻿<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
+<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
 <!-- adobe.ly/2GAgF93 -->
 <!-- https://scrimba.com/build-and-deploy-your-portfolio-c012 -->
 <!DOCTYPE html>
@@ -31,8 +31,7 @@
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+            <i class="fas fa-cube" style="margin-right: 10px;"></i> Hanseo Park
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -64,28 +63,33 @@
             Project <strong>Shadow Mapping</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">3D Graphics</p>
-        <img src="../img/portfolio_thumbnails/05_shadow.jpg" alt="a picture of this portfolio item" class="intro__img">
+        <img src="../img/portfolio_thumbnails/05_shadow.png" alt="a picture of this portfolio item" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project implements real-time dynamic shadow mapping in a 3D scene using C++ and OpenGL. The main idea is to first render the scene from the light source's point of view to create a depth texture. Then, we use this texture in a second pass to check if objects are hidden from the light and should be in shadow.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Shadow Map Generation:</strong> Created a <code>FrameBuffer</code> class to offscreen-render the scene's depth values from the light's perspective into a depth texture (<code>DEPTH_COMPONENT24</code>).</li>
+            <li><strong>Perspective Light Camera:</strong> Used a <code>Camera</code> class to act as the light source. This allows for realistic shadow casting and easily updates the view and projection matrices.</li>
+            <li><strong>Percentage Closer Filtering (PCF):</strong> Set up the depth texture for hardware-accelerated comparisons. I used <code>sampler2DShadow</code> in GLSL to create smoother and softer shadow edges.</li>
+            <li><strong>Visualizing the Shadow Map and Frustum:</strong> Added debug modes to draw the depth texture on the screen and show the light's view frustum. This made the debugging process much easier.</li>
+            <li><strong>Scene and Fog Integration:</strong> Added exponential fog for a better atmosphere and applied gamma correction to make the lighting look more realistic.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>Implementing shadow mapping was challenging but very rewarding. The biggest hurdle was the complex matrix math needed to transform coordinates from world space to the light's clip space, as well as fixing shadow bleeding issues. By using the debug modes to see the light frustum and depth map, I was able to find exactly where the depth calculations failed.</p>
+        <p>This project gave me a much stronger understanding of projective texturing and how modern graphics APIs handle depth comparisons. In the future, I plan to learn advanced techniques like Cascaded Shadow Maps (CSM) or Variance Shadow Mapping to improve shadow quality in larger scenes.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D05ShadowMapping/graphics_fun.html?start=shadow" tabindex="-1"></iframe>
+        <!-- WebGL Demo Iframe -->
+        <iframe id="demo" src="../webgl/D05ShadowMapping/graphics_fun.html" style="width: 100%; max-width: 800px; height: 600px; border: 2px solid var(--clr-accent, #ff7e67); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); display: block; margin: 0 auto;"></iframe>
     </div>
+
 
     <!-- Footer -->
     <footer class="footer">
