@@ -1,4 +1,4 @@
-﻿<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
+<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
 <!-- adobe.ly/2GAgF93 -->
 <!-- https://scrimba.com/build-and-deploy-your-portfolio-c012 -->
 <!DOCTYPE html>
@@ -30,8 +30,7 @@
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
-            <img src="../img/cout.jpg" alt="">
+            <i class="fas fa-cube" style="margin-right: 10px;"></i> Hanseo Park
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -63,27 +62,29 @@
             Project <strong>Gradient Noise</strong>
         </h1>
         <p class="section__subtitle section__subtitle--intro">3D Graphics</p>
-        <img src="../img/portfolio_thumbnails/07_gradient.jpg" alt="a picture of this portfolio item" class="intro__img">
+        <img src="../img/portfolio_thumbnails/07_gradient.png" alt="a picture of this portfolio item" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project implements a <strong>Gradient Noise</strong> procedural generation system using C++ and OpenGL. Unlike Value Noise, which interpolates random values, Gradient Noise interpolates between random gradients (vectors) assigned to integer lattice points, resulting in smoother and more organic patterns. The purpose of this project was to build a robust procedural noise generator and apply it in real-time to both 2D textures and 3D terrain displacement.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Gradient Noise Generation:</strong> Implemented a 3D Gradient Noise function using a predefined permutation table and gradient vectors, ensuring smooth interpolation using a quintic fade curve.</li>
+            <li><strong>Procedural Patterns:</strong> Developed advanced multi-octave noise functions including Fractal Sum, Turbulence, Marble, and Wood to create complex organic textures.</li>
+            <li><strong>Terrain Displacement:</strong> Wrote GLSL vertex shaders that sample the generated noise to procedurally displace the vertices of a 3D mesh, transforming a flat plane into dynamic terrain.</li>
+            <li><strong>Attribute Mapping:</strong> Debugged and fixed critical OpenGL vertex layout mismatches to ensure shaders received correct UV coordinates instead of normal vectors, allowing the noise to map properly across the geometry.</li>
+            <li><strong>Interactive UI:</strong> Integrated user-adjustable settings via ImGui for real-time manipulation of tiling scale, Z-depth, and pattern type without needing to recompile the project.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>A significant challenge in this project was debugging a subtle shader attribute mapping issue. Initially, the procedural noise evaluated to a flat gray color because the vertex shader was mistakenly reading the mesh's normal vectors (which were all identical) instead of the UV coordinates. Identifying and resolving this required careful synchronization between the C++ <code>MeshVertex</code> layout and the GLSL <code>layout(location)</code> specifiers. Through this project, I gained a much deeper appreciation for the mathematical beauty of procedural generation. It was incredibly rewarding to see how layering a relatively simple noise function across multiple octaves could produce highly intricate and natural-looking materials like wood and marble.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D07GradientNoise/graphics_fun.html?start=gradient" tabindex="-1"></iframe>
+        <iframe id="demo" src="../webgl/D07GradientNoise/graphics_fun.html?start=gradient" tabindex="-1" style="display: block; margin: 0 auto; width: 100%; max-width: 800px; height: 600px; border: 2px solid var(--clr-accent); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"></iframe>
     </div>
 
     <!-- Footer -->
